@@ -1,0 +1,139 @@
+/* thingz.io — Colors & Type
+ * Source: https://github.com/thingzio/thingzio.github.io (style.css)
+ * Single source of truth for the brand's visual foundations.
+ */
+
+:root {
+  /* ── Color: Surfaces — HUB theme (thingz.io landing) ─────── */
+  --bg:           #000000;  /* Page background, deepest surface */
+  --bg-subtle:    #060608;  /* Hero radial-gradient inner stop */
+  --bg-card:      #0a0a0c;  /* Card background */
+
+  /* ── Color: Surfaces — APP theme (DevPulse, DevTrace) ────── */
+  --app-bg:         #0c1017;  /* App page + card fill */
+  --app-bg-elevated: #171a22;  /* Header bar, scorecard band, stat cards */
+  --app-bg-hover:   #1f2330;
+  --app-border:     #242836;  /* Hairline on slate */
+
+  /* ── Color: Semantic (apps) — grades & status ────────────── */
+  --ok:     #22c55e;  /* Primary action (Score button), grade A */
+  --ok-soft: #22c55e22;
+  --warn:   #eab308;  /* Grade C, caution */
+  --warn-soft: #eab30822;
+  --danger: #ef4444;  /* Red X, negative deltas */
+  --danger-soft: #ef444422;
+  --info:   #4a9eff;  /* Same as --accent */
+
+  /* ── Color: Borders ──────────────────────────────────────── */
+  --border:       #1a1a1f;  /* Default 1px hairline */
+  --border-hover: #4a9eff40; /* Tinted accent border on hover (25% alpha) */
+
+  /* ── Color: Text ─────────────────────────────────────────── */
+  --text:         #f0f0f0;  /* Primary text; near-white, slightly warm-neutral */
+  --text-muted:   #999999;  /* Secondary text, descriptions */
+  --text-dim:     #555555;  /* Tertiary: footer, coming-soon, meta */
+
+  /* ── Color: Accent (the only chromatic color) ────────────── */
+  --accent:       #4a9eff;  /* Electric blue — interactive signal */
+  --accent-glow:  #4a9eff25; /* 15% alpha — badge fill, hover halo */
+
+  /* ── Radii ───────────────────────────────────────────────── */
+  --radius:       12px;     /* Cards */
+  --radius-pill:  100px;    /* Badges */
+
+  /* ── Spacing (derived from existing usage) ───────────────── */
+  --space-1: 0.25rem;   /*  4px */
+  --space-2: 0.5rem;    /*  8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-7: 1.75rem;   /* 28px — card padding */
+  --space-8: 2rem;      /* 32px — footer padding */
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;     /* 64px — section bottom */
+
+  /* ── Type: Family ────────────────────────────────────────── */
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               'Liberation Mono', 'Courier New', monospace;
+
+  /* ── Type: Scale (rem-based, 16px root) ──────────────────── */
+  --fs-xs:   0.65rem;   /* 10.4px — badge */
+  --fs-sm:   0.8rem;    /* 12.8px — footer */
+  --fs-body: 0.92rem;   /* 14.7px — product descriptions */
+  --fs-base: 1rem;      /* 16px */
+  --fs-h2:   1.2rem;    /* 19.2px — product name */
+  --fs-h1:   2rem;      /* 32px — page heading (extrapolated) */
+
+  /* ── Type: Weight ────────────────────────────────────────── */
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold: 600;   /* Headings, badges */
+
+  /* ── Type: Tracking ──────────────────────────────────────── */
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.08em;  /* Uppercase badges */
+
+  /* ── Type: Leading ───────────────────────────────────────── */
+  --lh-tight: 1.3;   /* Headings */
+  --lh-body:  1.6;   /* Body, footer */
+
+  /* ── Motion ──────────────────────────────────────────────── */
+  --ease:     ease;
+  --dur-fast: 0.2s;
+
+  /* ── Elevation ───────────────────────────────────────────── */
+  --shadow-hover: 0 0 24px var(--accent-glow), 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Semantic element defaults ─────────────────────────────── */
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: var(--lh-body);
+}
+
+h1, .h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+h2, .h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+}
+
+p, .body {
+  font-size: var(--fs-body);
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+}
+
+small, .caption {
+  font-size: var(--fs-sm);
+  color: var(--text-dim);
+}
+
+.eyebrow {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
