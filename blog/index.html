@@ -1,0 +1,21 @@
+---
+layout: default
+title: Blog
+description: Insights on open source security, supply chain risk, and developer analytics.
+---
+<main class="blog-index">
+    <h1 class="blog-index-title">Blog</h1>
+    <div class="blog-posts">
+        {% for post in site.posts %}
+        <a href="{{ post.url }}" class="blog-post-card">
+            <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </time>
+            <h2 class="post-card-title">{{ post.title }}</h2>
+            {% if post.description %}
+            <p class="post-card-desc">{{ post.description }}</p>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+</main>

@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Thingz Blog</title>
+    <subtitle>{{ site.description }}</subtitle>
+    <link href="{{ site.url }}/feed.xml" rel="self"/>
+    <link href="{{ site.url }}/blog/"/>
+    <updated>{{ site.posts.first.date | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}/blog/</id>
+    <author>
+        <name>Thingz</name>
+    </author>
+    {% for post in site.posts limit:20 %}
+    <entry>
+        <title>{{ post.title | xml_escape }}</title>
+        <link href="{{ site.url }}{{ post.url }}"/>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <id>{{ site.url }}{{ post.url }}</id>
+        <content type="html">{{ post.content | xml_escape }}</content>
+    </entry>
+    {% endfor %}
+</feed>

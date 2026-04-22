@@ -1,2 +1,15 @@
 include:
   - .well-known
+
+title: Thingz
+url: https://thingz.io
+description: Open source intelligence for teams that ship on trust.
+
+permalink: /blog/:title/
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post

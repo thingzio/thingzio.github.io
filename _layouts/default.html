@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta property="og:title" content="{{ page.title }} | Thingz">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/img/logo-small.svg">
+    <link rel="icon" href="/img/logo-small.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="alternate" type="application/atom+xml" title="Thingz Blog" href="/feed.xml">
+    <title>{{ page.title }} | Thingz</title>
+</head>
+<body>
+
+    <header class="blog-header">
+        <nav class="blog-nav">
+            <a href="/" class="blog-nav-logo">
+                <img src="/img/logo-small.svg" alt="thingz.io" class="blog-logo-img">
+            </a>
+            <a href="/blog/" class="blog-nav-link">Blog</a>
+        </nav>
+    </header>
+
+    {{ content }}
+
+    <footer>
+        <span>&copy; 2026 thingz.io</span>
+        <span class="footer-sep">&middot;</span>
+        <a href="/blog/">Blog</a>
+        <span class="footer-sep">&middot;</span>
+        <a href="/.well-known/security.txt">Security</a>
+    </footer>
+
+</body>
+</html>
