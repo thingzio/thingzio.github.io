@@ -23,13 +23,13 @@ DevTrace computes a numerical trust score between 0.0 and 1.0, mapped to a lette
 grade (A+ through F). The score is built from 23 individual signals grouped into five
 categories:
 
-| Category | Weight | What it captures |
-|---|---|---|
-| Code Provenance | 15% | Are commits cryptographically signed? How mature is the account? |
-| Identity | 25% | How old is the account? What is their role in the project? Is the profile populated? |
-| Engagement | 25% | How much of the work in this repo is theirs? How recently? Are their PRs getting merged? |
-| Community | 15% | Do other developers follow this person? Do they maintain their own projects? |
-| Behavioral | 20% | Is their activity consistent over time? Do they review code? Do they contribute across repos? |
+| Category | What it captures |
+|---|---|
+| Code Provenance | Are commits cryptographically signed? How mature is the account? |
+| Identity | How old is the account? What is their role in the project? Is the profile populated? |
+| Engagement | How much of the work in this repo is theirs? How recently? Are their PRs getting merged? |
+| Community | Do other developers follow this person? Do they maintain their own projects? |
+| Behavioral | Is their activity consistent over time? Do they review code? Do they contribute across repos? |
 
 None of these categories alone tells you much. A brand-new account is not inherently
 suspicious. A sparse profile does not mean bad intent. But the categories interact.
