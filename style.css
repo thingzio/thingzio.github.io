@@ -26,7 +26,48 @@ body {
     width: 280px;
     max-width: 80%;
     height: auto;
+    margin-bottom: -1.5rem;
+}
+
+/* Platform Intro */
+
+.platform-intro {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-12);
+    text-align: center;
+}
+
+.platform-intro p {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    line-height: var(--lh-body);
+    margin-bottom: var(--space-4);
+}
+
+.platform-intro p:last-child {
     margin-bottom: 0;
+}
+
+.platform-intro .platform-intro-lede {
+    color: var(--text);
+    font-size: var(--fs-h2);
+    line-height: var(--lh-body);
+}
+
+.platform-cta {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-8);
+    text-align: center;
+}
+
+.platform-cta p {
+    font-size: var(--fs-body);
+    color: var(--text-dim);
+    line-height: var(--lh-body);
 }
 
 /* Products */
@@ -396,6 +437,10 @@ footer .footer-sep {
 
     .hero-tagline {
         font-size: var(--fs-base);
+    }
+
+    .platform-intro {
+        padding: 0 var(--space-5) var(--space-6);
     }
 
     .products {

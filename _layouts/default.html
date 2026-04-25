@@ -13,10 +13,43 @@
     <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:image" content="{{ site.url }}/img/logo-small.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.title }} | Thingz">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/img/logo-small.svg">
     <link rel="icon" href="/img/logo-small.svg" type="image/svg+xml">
     <link rel="stylesheet" href="/style.css">
     <link rel="alternate" type="application/atom+xml" title="Thingz Blog" href="/feed.xml">
     <title>{{ page.title }} | Thingz</title>
+    {% if page.layout == 'post' %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": {{ page.title | jsonify }},
+        "description": {{ page.description | default: site.description | jsonify }},
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "author": {
+            "@type": "Organization",
+            "name": "Thingz",
+            "url": "https://thingz.io"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Thingz",
+            "url": "https://thingz.io",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://thingz.io/img/logo-small.svg"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ site.url }}{{ page.url }}"
+        }
+    }
+    </script>
+    {% endif %}
 </head>
 <body>
 

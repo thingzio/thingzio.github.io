@@ -21,6 +21,46 @@
     <link rel="icon" href="img/logo-small.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
     <title>Thingz | Open Source Intelligence Platform</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Thingz",
+        "url": "https://thingz.io",
+        "logo": "https://thingz.io/img/logo-small.svg",
+        "description": "Open source intelligence for teams that ship on trust. DevPulse tracks project health. DevTrace scores contributor trust. DevRadar monitors container vulnerabilities."
+    }
+    </script>
+    <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DevPulse",
+        "url": "https://devpulse.thingz.io",
+        "applicationCategory": "DeveloperApplication",
+        "description": "Understand the health of any open source project at a glance. Track contributor trends, measure development velocity, and surface risks before they become problems.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "operatingSystem": "Web"
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DevTrace",
+        "url": "https://devtrace.thingz.io",
+        "applicationCategory": "DeveloperApplication",
+        "description": "Inspect the provenance of any open source contributor at a glance. Trace contribution history, assess license obligations, and surface trust signals before they become risks.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "operatingSystem": "Web"
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DevRadar",
+        "applicationCategory": "DeveloperApplication",
+        "description": "Monitor the vulnerabilities of your container images over time across multiple scanners with CVE and license delta detection.",
+        "operatingSystem": "Web"
+    }]
+    </script>
 </head>
 <body>
 
@@ -28,30 +68,32 @@
         <img src="img/logo-small.svg" alt="thingz.io" class="hero-logo">
     </header>
 
+    <section class="platform-intro">
+        <p class="platform-intro-lede">Most teams evaluate open source dependencies by checking star counts, last commit dates, and license files. None of these answer the questions that actually matter: how many people are doing the work, who are they, and what happens if they stop?</p>
+        <p>Thingz is an open source intelligence platform that measures what package registries and repository dashboards leave out: project health, contributor trust, and container security.</p>
+    </section>
+
     <main class="products">
         <div class="products-grid">
 
-            <!-- product: DevPulse -->
             <a href="https://devpulse.thingz.io/" class="product-card">
                 <div class="product-header">
                     <img src="img/devpulse.svg" alt="" class="product-icon">
                     <h2 class="product-name">DevPulse</h2>
                 </div>
                 <span class="product-badge">Developer</span>
-                <p class="product-desc">Understand the health of any open source project at a glance. Track contributor trends, measure development velocity, and surface risks before they become problems.</p>
+                <p class="product-desc">Tracks the operational health of any public GitHub repository. Bus factor, contributor retention, review ratios, PR velocity, time to first response &mdash; quantitative signals that separate actively maintained projects from ones running on inertia.</p>
             </a>
 
-            <!-- product: DevTrace -->
             <a href="https://devtrace.thingz.io/" class="product-card">
                 <div class="product-header">
                     <img src="img/devtrace.svg" alt="" class="product-icon">
                     <h2 class="product-name">DevTrace</h2>
                 </div>
                 <span class="product-badge">Compliance</span>
-                <p class="product-desc">Inspect the provenance of any open source contributor at a glance. Trace contribution history, assess license obligations, and surface trust signals before they become risks.</p>
+                <p class="product-desc">Scores individual contributors across over 20 signals covering identity, engagement, community standing, and behavioral patterns. Instead of scanning packages after the fact, it evaluates the people writing the code &mdash; surfacing single-purpose accounts, anomalous contribution patterns, and sparse provenance before commit access decisions are made.</p>
             </a>
 
-            <!-- product: DevRadar -->
             <div class="product-card coming-soon">
                 <div class="product-header">
                     <h2 class="product-name">DevRadar</h2>
@@ -60,11 +102,15 @@
                     <span class="product-badge">Security</span>
                     <span class="product-badge-soon">Coming Soon</span>
                 </div>
-                <p class="product-desc">Monitor the vulnerabilities of your container images over time across multiple scanners with CVE and license delta detection.</p>
+                <p class="product-desc">Monitors container image vulnerabilities over time across multiple scanners, with CVE and license delta detection between builds.</p>
             </div>
 
         </div>
     </main>
+
+    <section class="platform-cta">
+        <p>Designed for OSPO leads, security teams, and engineering organizations that treat open source consumption as a supply chain problem &mdash; not a convenience assumption.</p>
+    </section>
 
     <footer>
         <span>&copy; 2026 thingz.io</span>
