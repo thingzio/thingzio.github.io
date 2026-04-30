@@ -1,7 +1,7 @@
 ---
 title: "AI-Generated PRs and the New Shape of Contributor Risk"
 description: AI lowers the cost of manufacturing convincing fake contributor histories. Here is what signals still hold up, and what DevTrace looks for in the metadata and the behavior.
-date: 2026-05-09
+date: 2026-04-30
 ---
 
 AI-generated code has a 2.7x higher vulnerability density than human-written code.
