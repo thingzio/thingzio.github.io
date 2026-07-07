@@ -7,16 +7,16 @@
           content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="description" content="Open source intelligence. DevPulse tracks project health across 30+ metrics with AI insights. DevTrace scores contributor trust across 25+ signals with AI risk narratives and a GitHub Action.">
-    <meta name="keywords" content="open source security, supply chain risk, developer analytics, contributor trust, software composition analysis, GitHub project health, OSPO tools, bus factor, NIST SSDF, contributor risk scoring, GitHub Action, AI insights, cross-VCS identity, OSSF Scorecard, EU CRA">
+    <meta name="description" content="Open source intelligence. DevPulse tracks project health across 30+ metrics with AI insights. DevTrace scores contributor trust across 25+ signals with AI risk narratives and a GitHub Action. DevRadar tracks container image vulnerabilities over time from SBOMs.">
+    <meta name="keywords" content="open source security, supply chain risk, developer analytics, contributor trust, software composition analysis, GitHub project health, OSPO tools, bus factor, NIST SSDF, contributor risk scoring, GitHub Action, AI insights, cross-VCS identity, OSSF Scorecard, EU CRA, container vulnerability scanning, SBOM monitoring, CVE tracking, Grype, Trivy">
     <meta property="og:title" content="Thingz | Open Source Intelligence Platform">
-    <meta property="og:description" content="DevPulse tracks open source project health across 30+ metrics with AI insights. DevTrace scores contributor trust across 25+ signals with AI risk narratives, a GitHub Action, and cross-VCS identity verification.">
+    <meta property="og:description" content="DevPulse tracks open source project health across 30+ metrics with AI insights. DevTrace scores contributor trust across 25+ signals with AI risk narratives, a GitHub Action, and cross-VCS identity verification. DevRadar tracks container image vulnerabilities over time from SBOMs.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thingz.io/">
     <meta property="og:image" content="https://thingz.io/img/logo-small.svg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Thingz | Open Source Intelligence Platform">
-    <meta name="twitter:description" content="DevPulse tracks open source project health across 30+ metrics with AI insights. DevTrace scores contributor trust across 25+ signals with AI risk narratives and a GitHub Action.">
+    <meta name="twitter:description" content="DevPulse tracks open source project health across 30+ metrics with AI insights. DevTrace scores contributor trust across 25+ signals with AI risk narratives and a GitHub Action. DevRadar tracks container image vulnerabilities over time from SBOMs.">
     <meta name="twitter:image" content="https://thingz.io/img/logo-small.svg">
     <link rel="icon" href="img/logo-small.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
@@ -56,8 +56,9 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "DevRadar",
-        "applicationCategory": "DeveloperApplication",
-        "description": "Monitor the vulnerabilities of your container images over time across multiple scanners with CVE and license delta detection.",
+        "url": "https://devradar.thingz.io",
+        "applicationCategory": "SecurityApplication",
+        "description": "Track how the vulnerabilities in your container images change over time. Submit an SBOM once and DevRadar rescans it daily with Grype and Trivy, recording every CVE added, fixed, or re-rated as a timestamped event. Scans the SBOM instead of pulling the image, so it can track artifacts from private registries it could never access.",
         "operatingSystem": "Web"
     }]
     </script>
@@ -106,17 +107,20 @@
                 </ul>
             </a>
 
-            <div class="product-card coming-soon">
+            <a href="https://devradar.thingz.io/dashboard" class="product-card">
                 <div class="product-header">
                     <img src="img/devradar.svg" alt="" class="product-icon">
                     <h2 class="product-name">DevRadar</h2>
                 </div>
-                <div class="product-badges">
-                    <span class="product-badge">Security</span>
-                    <span class="product-badge-soon">Coming Soon</span>
-                </div>
-                <p class="product-desc">Monitors container image vulnerabilities over time across multiple scanners, with CVE and license delta detection between builds.</p>
-            </div>
+                <span class="product-badge">Security</span>
+                <p class="product-desc">Tracks how the vulnerabilities in your container images change over time. Submit an SBOM once and DevRadar re-scans it daily with standard open source scanners, recording every CVE that&rsquo;s added, fixed, or re-rated as a timestamped event &mdash; so you see not just what&rsquo;s wrong now, but what changed, when, and whether it&rsquo;s getting better or worse. Because it scans the SBOM and never pulls the image, it can track artifacts from private registries it could never access.</p>
+                <ul class="product-capabilities" aria-label="DevRadar capabilities">
+                    <li class="capability-chip">SBOM-Based</li>
+                    <li class="capability-chip">Multi-Scanner</li>
+                    <li class="capability-chip">CVE Deltas</li>
+                    <li class="capability-chip">Private Registry</li>
+                </ul>
+            </a>
 
         </div>
     </main>
