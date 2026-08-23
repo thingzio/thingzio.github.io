@@ -56,6 +56,25 @@ body {
     line-height: var(--lh-body);
 }
 
+.platform-outro {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-6);
+    text-align: center;
+}
+
+.platform-outro p {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    line-height: var(--lh-body);
+    margin-bottom: var(--space-4);
+}
+
+.platform-outro p:last-child {
+    margin-bottom: 0;
+}
+
 .platform-cta {
     max-width: 680px;
     width: 100%;
@@ -478,6 +497,10 @@ footer .footer-sep {
 
     .platform-intro {
         padding: 0 var(--space-5) var(--space-6);
+    }
+
+    .platform-outro {
+        padding: 0 var(--space-5) var(--space-5);
     }
 
     .products {
